@@ -197,11 +197,13 @@
     .reveal[data-delay="4"]{transition-delay:.24s}
     .reveal[data-delay="5"]{transition-delay:.30s}
     .reveal[data-delay="6"]{transition-delay:.36s}
+    .reveal[data-delay="7"]{transition-delay:.42s}
 
     /* ============================================================
        SITUAÇÕES (cards clicáveis)
        ============================================================ */
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .cards .card:nth-child(3n+1):last-child{grid-column:2}
     .card{
       display:flex;flex-direction:column;gap:.55rem;position:relative;
       background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.4rem 1.35rem;
@@ -326,6 +328,7 @@
        ============================================================ */
     @media (max-width:1024px){
       .cards{grid-template-columns:repeat(2,1fr)}
+      .cards .card:nth-child(2n+1):last-child{grid-column:1/-1;width:calc(50% - .5rem);justify-self:center}
       .docs{grid-template-columns:repeat(3,1fr)}
       .about{grid-template-columns:300px 1fr}
     }
@@ -358,6 +361,7 @@
       .hero__cta .micro{justify-content:center}
       .hero__checks{flex-direction:column;gap:.6rem;margin-top:1.5rem;padding-top:1.2rem}
       .cards{grid-template-columns:1fr;gap:.8rem}
+      .cards .card:nth-child(2n+1):last-child{width:100%}
       .card{padding:1.2rem 1.1rem 1.1rem}
       .cta-band{flex-direction:column;align-items:stretch;padding:1.25rem 1.15rem}
       .cta-band .btn,.steps-cta .btn,.about__content .btn,.final .btn{width:100%}
@@ -494,6 +498,12 @@
             <h3>Quero pedir demissão, mas há irregularidades</h3>
             <p>Entenda as consequências antes de assinar qualquer documento.</p>
             <a class="card__link" data-wa data-tema="Quero pedir demissão, mas há irregularidades" href="#" target="_blank" rel="noopener">Falar sobre isso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          </article>
+          <article class="card reveal" data-delay="7">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15V8h6l3 6v1"/><path d="M6 8V5h4v3"/><path d="M4 15h9"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="12.5" cy="18.5" r="2"/><path d="M16.5 4v13"/><path d="M16.5 17H21"/></svg></div>
+            <h3>Sou operador de empilhadeira e não recebo periculosidade</h3>
+            <p>A troca do cilindro de GLP e o contato com inflamáveis podem caracterizar atividade perigosa.</p>
+            <a class="card__link" data-wa data-tema="Sou operador de empilhadeira e não recebo periculosidade" href="#" target="_blank" rel="noopener">Falar sobre isso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
           </article>
         </div>
 
